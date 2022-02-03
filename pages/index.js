@@ -1,6 +1,6 @@
 import About from "../components/home/About/About";
 import Events from "../components/home/Events/Events";
-import Footer from "../components/home/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import HeroSection from "../components/HeroSection/HeroSection";
 import Services from "../components/home/Services/Services";
 import Subcriber from "../components/home/Subscriber/Subcriber";
