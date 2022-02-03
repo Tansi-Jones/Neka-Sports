@@ -13,7 +13,7 @@ export default function Events() {
         assumenda dolor quia numquam ducimus molestiae delectus quisquam cum
         dignissimos dolorem!
       </p>
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-center md:justify-items-center gap-x-16 gap-y-10 mt-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center md:justify-items-center gap-x-16 gap-y-10 mt-20 xl:w-2/3 xl:mx-auto">
         {eventsDetails.map((eventsDetail) => (
           <Event key={eventsDetail.id} {...eventsDetail} />
         ))}

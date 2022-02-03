@@ -18,7 +18,7 @@ export default function Navbar() {
           </div>
           <h1 className="text-gradient">neka sports</h1>
         </div>
-        <div className="hidden text-white text-base capitalize lg:flex items-center space-x-20 tracking-wide">
+        <div className="hidden text-white text-lg capitalize lg:flex items-center space-x-20 tracking-wide">
           {menuLinks.map(({ id, title, url }) => (
             <div key={id}>
               <Link href={url}>

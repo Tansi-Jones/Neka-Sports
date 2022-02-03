@@ -1,25 +1,34 @@
 import Banner from "../components/HeroSection/Banner";
 import MetaTitle from "../components/Meta/MetaTitle";
 import Footer from "../components/home/Footer/Footer";
-import Image from "next/image";
 import { HomeIcon, PhoneIcon, MailIcon } from "@heroicons/react/outline";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Contact() {
-  const [input, setinput] = useState({
+  const [input, setInput] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    const { name, email, subject, message } = input;
+    try {
+      const { data } = await axios.post("/api/contact", {
+        name,
+        email,
+        subject,
+        message,
+      });
+    } catch (error) {}
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setinput((prevValue) => {
+    setInput((prevValue) => {
       return { ...prevValue, [name]: value };
     });
   };
@@ -41,7 +50,7 @@ export default function Contact() {
           <div className=" w-full h-[400px] md:h-[600px] my-36 rounded-xl overflow-auto">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.3478921115184!2d28.016746615634165!3d-26.185359069568257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c0a6ffc9379%3A0x3d365796c1f181b!2s44%20STANLEY!5e0!3m2!1sen!2s!4v1637002101355!5m2!1sen!2s"
-              className="w-full h-full border"
+              className="w-full h-full"
               loading="lazy"
             ></iframe>
           </div>

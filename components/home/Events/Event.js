@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { CalendarIcon, LocationMarkerIcon } from "@heroicons/react/solid";
+import { useRouter } from "next/router";
 
 export default function Event({ img, title, desc, date, location }) {
+  const router = useRouter();
   return (
     <div className="flex flex-wrap md:flex-nowrap max-w-md md:max-w-2xl bg-white backdrop-blur-xl bg-opacity-10 rounded-lg">
       <div className="relative w-[68rem] h-[14rem] md:h-[22rem] ">
@@ -26,7 +28,23 @@ export default function Event({ img, title, desc, date, location }) {
           <LocationMarkerIcon className="text-white h-4 md:h-6" />
           <p className="font-light">{location}</p>
         </div>
-        <button className=" button-primary w-full">view more</button>
+        <button
+          className=" button-primary w-full"
+          onClick={() => {
+            router.push({
+              pathname: "/eventDetails",
+              query: {
+                img,
+                title,
+                desc,
+                date,
+                location,
+              },
+            });
+          }}
+        >
+          view more
+        </button>
       </div>
     </div>
   );
