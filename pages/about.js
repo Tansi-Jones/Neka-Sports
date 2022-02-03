@@ -62,7 +62,7 @@ export default function About() {
             dignissimos dolorem!
           </p>
 
-          <div className="flex overflow-x-auto flex-nowrap xl:flex-wrap  items-center xl:justify-center gap-x-10 lg:gap-x-48 gap-y-10 mt-20">
+          <div className="flex overflow-x-auto scrollbar-hide flex-nowrap xl:flex-wrap  items-center xl:justify-center gap-x-10 lg:gap-x-48 gap-y-10 mt-20">
             {ourTeam.map(({ id, img, title, position, desc }) => (
               <>
                 <div
@@ -110,7 +110,7 @@ export default function About() {
             dignissimos dolorem!
           </p>
 
-          <div className="flex overflow-x-auto flex-nowrap xl:flex-wrap  items-center xl:justify-center gap-x-10 lg:gap-x-48 gap-y-10 mt-20">
+          <div className="flex overflow-x-auto scrollbar-hide flex-nowrap xl:flex-wrap  items-center xl:justify-center gap-x-10 lg:gap-x-48 gap-y-10 mt-20">
             {ourClients.map(({ id, img, title, position }) => (
               <>
                 <div

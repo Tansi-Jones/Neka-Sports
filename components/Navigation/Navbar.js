@@ -1,9 +1,12 @@
 import Image from "next/image";
 import menuLinks from "./data";
 import Link from "next/link";
-import { MenuAlt4Icon } from "@heroicons/react/outline";
+import { MenuAlt4Icon, XIcon } from "@heroicons/react/outline";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isSideBar, setIsSideBar] = useState(false);
+
   return (
     <>
       <div className="flex justify-between items-center  p-2 w-[90%] m-auto z-50">
@@ -22,13 +25,37 @@ export default function Navbar() {
           {menuLinks.map(({ id, title, url }) => (
             <div key={id}>
               <Link href={url}>
-                <a>{title}</a>
+                <a className="hover:text-gold">{title}</a>
               </Link>
             </div>
           ))}
         </div>
-        <div className="block lg:hidden">
-          <MenuAlt4Icon className="text-white h-8 md:h-10" />
+        <div
+          className="cursor-pointer block lg:hidden "
+          onClick={() => {
+            setIsSideBar(!isSideBar);
+          }}
+        >
+          {!isSideBar ? (
+            <MenuAlt4Icon className="text-white h-8 md:h-10" />
+          ) : (
+            <XIcon className="text-white h-8 md:h-10" />
+          )}
+        </div>
+      </div>
+
+      <div
+        className={`w-[90%] mx-auto pt-5 pb-10 px-2
+         ${isSideBar ? "showMenu" : "hideMenu"}`}
+      >
+        <div className=" text-white text-xl capitalize tracking-wide space-y-5">
+          {menuLinks.map(({ id, title, url }) => (
+            <div key={id}>
+              <Link href={url}>
+                <a className="hover:text-gold ">{title}</a>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </>

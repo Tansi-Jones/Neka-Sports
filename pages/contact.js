@@ -116,7 +116,7 @@ export default function Contact() {
                 type="submit"
                 className="bg-gold text-white rounded-lg capitalize  w-full text-xl md:text-2xl py-3 mt-5"
               >
-                subscribe
+                send
               </button>
             </form>
           </div>

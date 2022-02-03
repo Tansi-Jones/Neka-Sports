@@ -25,11 +25,11 @@ export default function Subcriber() {
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             placeholder="Enter your email address"
-            className="border border-white md:border-0 rounded-full px-4 py-3 md:pl-0 md:ml-5 outline-none flex-grow bg-transparent text-white text-base md:text-lg placeholder:text-white font-light"
+            className="border border-white md:border-0 rounded-full px-4 py-3 md:pl-0 md:ml-5 outline-none flex-grow bg-transparent text-white text-lg md:text-xl placeholder:text-white font-light"
           />
           <button
             type="submit"
-            className="bg-gold text-white rounded-full py-3 md:py-5 px-5 md:px-10 capitalize md:w-fit w-full mt-3 md:mt-0"
+            className="bg-gold text-lg text-white rounded-full py-3 md:py-5 px-5 md:px-10 capitalize md:w-fit w-full mt-3 md:mt-0"
           >
             subscribe
           </button>

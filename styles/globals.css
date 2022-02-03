@@ -39,4 +39,10 @@ body {
   .card div:nth-child(3) {
     @apply bg-gold;
   }
+  .showMenu {
+    @apply block lg:hidden transform translate-y-0;
+  }
+  .hideMenu {
+    @apply hidden lg:hidden transform -translate-y-[100%];
+  }
 }
