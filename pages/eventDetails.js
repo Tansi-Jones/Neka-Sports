@@ -1,6 +1,6 @@
 import Banner from "../components/HeroSection/Banner";
 import MetaTitle from "../components/Meta/MetaTitle";
-import Footer from "../components/home/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import Image from "next/image";
 import {
   CalendarIcon,
@@ -8,6 +8,7 @@ import {
   ClockIcon,
 } from "@heroicons/react/outline";
 import { useRouter } from "next/dist/client/router";
+import Link from "next/link";
 
 export default function EventDetails() {
   const router = useRouter();
@@ -16,7 +17,7 @@ export default function EventDetails() {
 
   return (
     <>
-      <MetaTitle />
+      <MetaTitle subTitle="Events" />
 
       <header className="overflow-hidden">
         <Banner
@@ -60,10 +61,15 @@ export default function EventDetails() {
                 </p>
               </div>
             </div>
-            <div className="md:justify-self-end">
+            <div className="md:justify-self-end grid space-y-5">
               <button className="button-primary px-16 py-3 text-base md:text-2xl">
-                register
+                Register
               </button>
+              <Link href="/events">
+                <a className="text-white text-center px-16 py-3 text-light md:text-xl">
+                  Go Back
+                </a>
+              </Link>
             </div>
           </div>
         </section>

@@ -1,6 +1,6 @@
 import Banner from "../components/HeroSection/Banner";
 import MetaTitle from "../components/Meta/MetaTitle";
-import Footer from "../components/home/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import Image from "next/image";
 import visionMisionData from "../components/about/VisionMissionData";
 import ourTeam from "../components/about/ourTeam";
@@ -9,7 +9,7 @@ import ourClients from "../components/about/ourClients";
 export default function About() {
   return (
     <>
-      <MetaTitle />
+      <MetaTitle subTitle="About" />
 
       <header className="overflow-hidden">
         <Banner
@@ -23,11 +23,8 @@ export default function About() {
         <section className="my-52">
           <div className="flex flex-wrap md:flex-nowrap items-center justify-center md:gap-x-10 lg:gap-x-48 gap-y-10 mt-20">
             {visionMisionData.map(({ id, img, title, desc }) => (
-              <>
-                <div
-                  className="flex flex-wrap max-w-[18rem] md:max-w-[22rem] bg-white backdrop-blur-xl bg-opacity-10 rounded-lg"
-                  key={id}
-                >
+              <div key={id}>
+                <div className="flex flex-wrap max-w-[18rem] md:max-w-[22rem] bg-white backdrop-blur-xl bg-opacity-10 rounded-lg">
                   <div className="relative w-[40rem] h-[12rem] md:h-[14rem] ">
                     <Image
                       src={img}
@@ -46,7 +43,7 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-              </>
+              </div>
             ))}
           </div>
         </section>
@@ -64,11 +61,8 @@ export default function About() {
 
           <div className="flex overflow-x-auto scrollbar-hide flex-nowrap xl:flex-wrap  items-center xl:justify-center gap-x-10 lg:gap-x-48 gap-y-10 mt-20">
             {ourTeam.map(({ id, img, title, position, desc }) => (
-              <>
-                <div
-                  className="flex flex-wrap md:flex-nowrap max-w-[18rem] md:max-w-2xl bg-white backdrop-blur-xl bg-opacity-10 rounded-lg"
-                  key={id}
-                >
+              <div key={id}>
+                <div className="flex flex-wrap md:flex-nowrap max-w-[18rem] md:max-w-2xl bg-white backdrop-blur-xl bg-opacity-10 rounded-lg">
                   <div className="relative w-[68rem] h-[14rem] md:h-[22rem] ">
                     <Image
                       src={img}
@@ -91,7 +85,7 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-              </>
+              </div>
             ))}
           </div>
           <button className="mt-20 button-primary block w-[40%] md:w-[20%] xl:w-[10%] mx-auto">
@@ -112,11 +106,8 @@ export default function About() {
 
           <div className="flex overflow-x-auto scrollbar-hide flex-nowrap xl:flex-wrap  items-center xl:justify-center gap-x-10 lg:gap-x-48 gap-y-10 mt-20">
             {ourClients.map(({ id, img, title, position }) => (
-              <>
-                <div
-                  className="flex flex-wrap max-w-[18rem] md:max-w-[22rem] bg-white backdrop-blur-xl bg-opacity-10 rounded-lg"
-                  key={id}
-                >
+              <div key={id}>
+                <div className="flex flex-wrap max-w-[18rem] md:max-w-[22rem] bg-white backdrop-blur-xl bg-opacity-10 rounded-lg">
                   <div className="relative w-[40rem] h-[14rem] md:h-[20rem] ">
                     <Image
                       src={img}
@@ -135,7 +126,7 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-              </>
+              </div>
             ))}
           </div>
           <button className="mt-20 button-primary block w-[40%] md:w-[20%] xl:w-[10%] mx-auto">

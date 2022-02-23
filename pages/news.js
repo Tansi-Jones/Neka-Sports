@@ -1,6 +1,6 @@
 import Banner from "../components/HeroSection/Banner";
 import MetaTitle from "../components/Meta/MetaTitle";
-import Footer from "../components/home/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import Image from "next/image";
 import { CalendarIcon, ClockIcon } from "@heroicons/react/solid";
 import newsData from "../components/news/data";
@@ -11,7 +11,7 @@ export default function News() {
 
   return (
     <>
-      <MetaTitle />
+      <MetaTitle subTitle="News" />
 
       <header className="overflow-hidden">
         <Banner
@@ -25,10 +25,9 @@ export default function News() {
         <section className="my-52">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 items-center justify-items-center gap-x-10 lg:gap-x-48 gap-y-10 mt-20">
             {newsData.map(({ id, img, title, details, time, date }) => (
-              <>
+              <div key={id}>
                 <div
                   className="cursor-pointer flex flex-wrap max-w-[18rem] md:max-w-[22rem] bg-white backdrop-blur-xl bg-opacity-10 rounded-lg"
-                  key={id}
                   onClick={() => {
                     router.push({
                       pathname: "/newsDetails",
@@ -68,7 +67,7 @@ export default function News() {
                     </div>
                   </div>
                 </div>
-              </>
+              </div>
             ))}
           </div>
           <button className="mt-20 button-primary block w-[40%] md:w-[20%] xl:w-[10%] mx-auto">

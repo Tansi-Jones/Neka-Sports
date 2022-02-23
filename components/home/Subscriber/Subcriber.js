@@ -29,7 +29,7 @@ export default function Subcriber() {
           />
           <button
             type="submit"
-            className="bg-gold text-lg text-white rounded-full py-3 md:py-5 px-5 md:px-10 capitalize md:w-fit w-full mt-3 md:mt-0"
+            className="bg-gold  hover:bg-transparent hover:text-gold border border-gold text-lg transition ease-out text-white rounded-full py-3 md:py-5 px-5 md:px-10 capitalize md:w-fit w-full mt-3 md:mt-0"
           >
             subscribe
           </button>

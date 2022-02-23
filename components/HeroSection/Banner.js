@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Navbar from "../Navigation/Navbar";
-import NewsMover from "../home/NewsTicker/NewsMover";
-import newsData from "../news/data";
 import Link from "next/link";
 
 export default function Banner({

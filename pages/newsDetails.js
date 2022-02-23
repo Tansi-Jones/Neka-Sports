@@ -1,22 +1,19 @@
 import Banner from "../components/HeroSection/Banner";
 import MetaTitle from "../components/Meta/MetaTitle";
-import Footer from "../components/home/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import Image from "next/image";
-import {
-  CalendarIcon,
-  LocationMarkerIcon,
-  ClockIcon,
-} from "@heroicons/react/outline";
+import Link from "next/link";
+import { CalendarIcon, ClockIcon } from "@heroicons/react/outline";
 import { useRouter } from "next/dist/client/router";
 
 export default function NewsDetails() {
   const router = useRouter();
 
-  const { img, title, details, date, location } = router.query;
+  const { img, title, details, date } = router.query;
 
   return (
     <>
-      <MetaTitle />
+      <MetaTitle subTitle="News" />
 
       <header className="overflow-hidden">
         <Banner
@@ -54,10 +51,12 @@ export default function NewsDetails() {
                 </p>
               </div>
             </div>
-            <div className="md:justify-self-end">
-              <button className="button-primary px-16 py-3 text-base md:text-2xl">
-                register
-              </button>
+            <div className="md:justify-self-end grid space-y-5">
+              <Link href="/news">
+                <a className="text-white text-center px-16 py-3 text-light md:text-xl">
+                  Go Back
+                </a>
+              </Link>
             </div>
           </div>
         </section>

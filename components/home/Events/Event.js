@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 export default function Event({ img, title, desc, date, location }) {
   const router = useRouter();
   return (
-    <div className="flex flex-wrap md:flex-nowrap max-w-md md:max-w-2xl bg-white backdrop-blur-xl bg-opacity-10 rounded-lg">
+    <div className="flex flex-wrap md:flex-nowrap max-w-xs md:max-w-2xl bg-white backdrop-blur-xl bg-opacity-10 rounded-lg">
       <div className="relative w-[68rem] h-[14rem] md:h-[22rem] ">
         <Image
           src={img}

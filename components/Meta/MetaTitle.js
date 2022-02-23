@@ -1,9 +1,9 @@
 import Head from "next/head";
 
-export default function MetaTitle() {
+export default function MetaTitle({ subTitle }) {
   return (
     <Head>
-      <title>neka sports</title>
+      <title>Neka Sports {subTitle && `| ${subTitle}`}</title>
     </Head>
   );
 }

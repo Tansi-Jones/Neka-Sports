@@ -1,17 +1,17 @@
 import Banner from "../components/HeroSection/Banner";
 import MetaTitle from "../components/Meta/MetaTitle";
-import Footer from "../components/home/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import Image from "next/image";
 import eventsData from "../components/event/eventsData";
 import { CalendarIcon, LocationMarkerIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 
-export default function Events() {
+export default function Events({ loadEvents }) {
   const router = useRouter();
 
   return (
     <>
-      <MetaTitle />
+      <MetaTitle subTitle="Events" />
 
       <header className="overflow-hidden">
         <Banner
@@ -25,11 +25,8 @@ export default function Events() {
         <section className="my-52">
           <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-10 mt-20">
             {eventsData.map(({ id, img, title, desc, date, location }) => (
-              <>
-                <div
-                  className="flex flex-wrap md:flex-nowrap max-w-xs md:max-w-2xl bg-white backdrop-blur-xl bg-opacity-10 rounded-lg"
-                  key={id}
-                >
+              <div key={id}>
+                <div className="flex flex-wrap md:flex-nowrap max-w-xs md:max-w-2xl bg-white backdrop-blur-xl bg-opacity-10 rounded-lg">
                   <div className="relative w-[68rem] h-[14rem] md:h-[22rem] ">
                     <Image
                       src={img}
@@ -71,7 +68,7 @@ export default function Events() {
                     </button>
                   </div>
                 </div>
-              </>
+              </div>
             ))}
           </div>
           <button className="mt-20 button-primary block w-[40%] md:w-[20%] xl:w-[10%] mx-auto">
@@ -86,3 +83,18 @@ export default function Events() {
     </>
   );
 }
+
+// export async function getServerSideProps() {
+//   const dev = process.env.NODE_ENV !== "production";
+//   const { DEV_URL, PROD_URL } = process.env;
+
+//   const response = await fetch(
+//     `${dev ? "http://localhost:3000" : PROD_URL}/api/event`
+//   ).then((res) => res.json());
+
+//   const { data: loadEvents } = response;
+
+//   return {
+//     props: { loadEvents },
+//   };
+// }

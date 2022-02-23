@@ -1,6 +1,6 @@
 import Banner from "../components/HeroSection/Banner";
 import MetaTitle from "../components/Meta/MetaTitle";
-import Footer from "../components/home/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import { HomeIcon, PhoneIcon, MailIcon } from "@heroicons/react/outline";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -35,7 +35,7 @@ export default function Contact() {
 
   return (
     <>
-      <MetaTitle />
+      <MetaTitle subTitle="Contact" />
 
       <header className="overflow-hidden">
         <Banner
@@ -58,7 +58,7 @@ export default function Contact() {
 
         <section className="grid grid-cols-1 lg:grid-cols-2 my-52">
           <div className="">
-            <form action="" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-x-8 mb-10 gap-y-10 xl:gap-y-0">
                 <div>
                   <p className="text-white font-light text-lg md:text-2xl mb-5">

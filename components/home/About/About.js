@@ -15,19 +15,23 @@ export default function About() {
   };
 
   return (
-    <div
-      className="relative rounded-xl overflow-y-auto"
-      onClick={handlePlayPause}
-    >
-      <video width={1000} height={1000} ref={videoPlayer}>
+    <div className="relative rounded-xl" onClick={handlePlayPause}>
+      <video
+        width={1000}
+        height={1000}
+        ref={videoPlayer}
+        className="rounded-xl"
+      >
         <source src="assets/video/soccer.mp4" type="video/mp4" />
       </video>
-      <div className={`cursor-pointer ${isPlaying ? "hidden" : "block"}`}>
+      <div className={` cursor-pointer ${isPlaying ? "hidden" : "block"}`}>
         <Image
           src="/assets/img/others/stadium.jpg"
           layout="fill"
           objectFit="cover"
           alt=""
+          className="rounded-xl"
+          priority
         />
         <div className="absolute md:top-[29%] xl:top-1/3 md:left-[36%] xl:left-[38%]">
           <div className="absolute bg-gold rounded-full md:w-[200px] md:h-[200px] animate-ping -z-0"></div>
