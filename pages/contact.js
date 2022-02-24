@@ -5,6 +5,7 @@ import { HomeIcon, PhoneIcon, MailIcon } from "@heroicons/react/outline";
 import { useState } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import { BiLoaderAlt } from "react-icons/bi";
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
@@ -125,9 +126,12 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="bg-gold text-white rounded-lg capitalize  w-full text-xl md:text-2xl py-3 mt-5"
+                className="flex items-center justify-center space-x-3 bg-gold text-white rounded-lg capitalize  w-full text-xl md:text-2xl py-3 mt-5"
               >
-                send
+                <span>send</span>
+                {isLoading && (
+                  <BiLoaderAlt className="text-white text-lg animate-spin" />
+                )}
               </button>
             </form>
           </div>
