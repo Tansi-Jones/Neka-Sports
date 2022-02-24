@@ -4,8 +4,10 @@ import Footer from "../components/Footer/Footer";
 import { HomeIcon, PhoneIcon, MailIcon } from "@heroicons/react/outline";
 import { useState } from "react";
 import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Contact() {
+  const [isLoading, setIsLoading] = useState(false);
   const [input, setInput] = useState({
     name: "",
     email: "",
@@ -17,13 +19,19 @@ export default function Contact() {
     event.preventDefault();
     const { name, email, subject, message } = input;
     try {
+      setIsLoading(true);
       const { data } = await axios.post("/api/contact", {
         name,
         email,
         subject,
         message,
       });
-    } catch (error) {}
+      toast(data);
+      setIsLoading(false);
+    } catch (error) {
+      setIsLoading(false);
+      toast.error(error.response.data);
+    }
   };
 
   const handleChange = (event) => {
@@ -36,6 +44,9 @@ export default function Contact() {
   return (
     <>
       <MetaTitle subTitle="Contact" />
+
+      {/* Toster */}
+      <Toaster />
 
       <header className="overflow-hidden">
         <Banner
