@@ -2,7 +2,7 @@ import Banner from "../components/HeroSection/Banner";
 import MetaTitle from "../components/Meta/MetaTitle";
 import Footer from "../components/Footer/Footer";
 import { HomeIcon, PhoneIcon, MailIcon } from "@heroicons/react/outline";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 export default function Contact() {
