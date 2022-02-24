@@ -1,7 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "Sanity-Neka-Sport"
+    "name": "Neka Sport"
   },
   "api": {
     "projectId": "u0cqq1wz",
@@ -15,9 +15,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
