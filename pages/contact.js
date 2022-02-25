@@ -1,6 +1,6 @@
-import Banner from "../components/HeroSection/Banner";
-import MetaTitle from "../components/Meta/MetaTitle";
-import Footer from "../components/Footer/Footer";
+import Banner from "../components/banner/Banner";
+import MetaTitle from "../components/meta/MetaTitle";
+import Footer from "../components/footer/Footer";
 import { HomeIcon, PhoneIcon, MailIcon } from "@heroicons/react/outline";
 import { useState } from "react";
 import axios from "axios";

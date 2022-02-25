@@ -1,6 +1,6 @@
-import Banner from "../components/HeroSection/Banner";
-import MetaTitle from "../components/Meta/MetaTitle";
-import Footer from "../components/Footer/Footer";
+import Banner from "../components/banner/Banner";
+import MetaTitle from "../components/meta/MetaTitle";
+import Footer from "../components/footer/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { CalendarIcon, ClockIcon } from "@heroicons/react/outline";

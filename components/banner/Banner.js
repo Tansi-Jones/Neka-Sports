@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Navbar from "../Navigation/Navbar";
+import Navbar from "../navigation/Navbar";
 import Link from "next/link";
 
 export default function Banner({

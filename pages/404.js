@@ -1,6 +1,6 @@
-import Footer from "../components/Footer/Footer";
-import MetaTitle from "../components/Meta/MetaTitle";
-import Navbar from "../components/Navigation/Navbar";
+import Footer from "../components/footer/Footer";
+import MetaTitle from "../components/meta/MetaTitle";
+import Navbar from "../components/navigation/Navbar";
 import Link from "next/link";
 
 export default function Custom404() {
