@@ -1,5 +1,4 @@
 import Image from "next/image";
-import menuLinks from "./data";
 import Link from "next/link";
 import { MenuAlt4Icon, XIcon } from "@heroicons/react/outline";
 import { useState } from "react";
@@ -61,3 +60,31 @@ export default function Navbar() {
     </>
   );
 }
+
+export const menuLinks = [
+  {
+    id: 1,
+    title: "home",
+    url: "/",
+  },
+  {
+    id: 2,
+    title: "about us",
+    url: "/about",
+  },
+  {
+    id: 3,
+    title: "events",
+    url: "/events",
+  },
+  {
+    id: 4,
+    title: "news",
+    url: "/news",
+  },
+  {
+    id: 5,
+    title: "contact",
+    url: "/contact",
+  },
+];

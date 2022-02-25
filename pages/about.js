@@ -2,7 +2,6 @@ import Banner from "../components/banner/Banner";
 import MetaTitle from "../components/meta/MetaTitle";
 import Footer from "../components/footer/Footer";
 import Image from "next/image";
-import visionMisionData from "../components/about/VisionMissionData";
 import ourTeam from "../components/about/ourTeam";
 import ourClients from "../components/about/ourClients";
 
@@ -141,3 +140,18 @@ export default function About() {
     </>
   );
 }
+
+export const visionMisionData = [
+  {
+    id: 1,
+    img: "/assets/img/others/vission.jpg",
+    title: "our vision",
+    desc: " It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
+  },
+  {
+    id: 2,
+    img: "/assets/img/others/mission'.jpg",
+    title: "our mission",
+    desc: " It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
+  },
+];
