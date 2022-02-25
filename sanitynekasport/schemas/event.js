@@ -36,6 +36,11 @@ export default {
       type: "date",
     },
     {
+      name: "location",
+      title: "Location",
+      type: "string",
+    },
+    {
       name: "publishedAt",
       title: "Published at",
       type: "datetime",
