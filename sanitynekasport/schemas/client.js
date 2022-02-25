@@ -4,8 +4,8 @@ export default {
   type: "document",
   fields: [
     {
-      name: "title",
-      title: "Title",
+      name: "name",
+      title: "Name",
       type: "string",
     },
     {
@@ -18,8 +18,8 @@ export default {
       },
     },
     {
-      name: "description",
-      title: "Description",
+      name: "position",
+      title: "Position",
       type: "string",
     },
     {
@@ -33,8 +33,7 @@ export default {
   ],
   preview: {
     select: {
-      title: "title",
-      date: "startDate",
+      title: "name",
       media: "mainImage",
     },
   },
