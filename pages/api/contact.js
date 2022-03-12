@@ -16,7 +16,7 @@ export default async function handler(req, res) {
 
   try {
     await client.create({
-      _type: "contact",
+      _type: "message",
       name,
       email,
       subject,

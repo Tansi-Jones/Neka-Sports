@@ -76,7 +76,7 @@ export default function Events({ events }) {
               )
             )}
           </div>
-          {events.length > 6 && (
+          {events.length > 4 && (
             <button className="mt-20 button-primary block w-[40%] md:w-[20%] xl:w-[10%] mx-auto">
               load more
             </button>
